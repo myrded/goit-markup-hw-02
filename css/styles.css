@@ -30,6 +30,11 @@ body {
     list-style: none;
 }
 
+.link:hover,
+.link:focus {
+    color: var(--accent);
+}
+
 .visually-hidden {
     position: absolute;
     white-space: nowrap;
@@ -79,12 +84,7 @@ body {
     color: var(--description); 
 }
 
-.menu-nav-link:hover,
-.menu-nav-link:focus, 
-.mailtel-nav-link:hover,
-.mailtel-nav-link:focus {
-    color: var(--accent); 
-}
+
 
 .menu-nav-link.current {
     color: var(--accent);
