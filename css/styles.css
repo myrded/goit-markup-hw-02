@@ -15,13 +15,32 @@ body {
 
 :root {
     --accent: #2196F3;
+    --baghovfocus: #188CE8;
     --background: #FFFFFF;
     --title: #212121;
-    --description: #757575;  
+    --description: #757575;
+    --bagrundherfoot: #2F303A;
+    --hederlogo: #000000;
+    --backgroundteambtn: #F5F4FA;
+    --rgba: rgba(255, 255, 255, 0.6);
+
 } 
 
 .list {
     list-style: none;
+}
+
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
 }
 
 /* акценти (accent) #2196F3 */
@@ -34,7 +53,7 @@ body {
 /* header-nav */
 
 .header-logo {
-    color: #000000;
+    color: var(--hederlogo);
     font-family: Raleway, sans-serif;
     font-weight: 700;
     font-size: 26px;
@@ -74,11 +93,11 @@ body {
 /* Hero section */
 
 .hero {
-    background-color: #2F303A;
+    background-color: var(--bagrundherfoot)
 }
 
 .hero-titel {
-    color: #FFFFFF;
+    color: var(--background);
     font-weight: 900;
     font-size: 44px;
     line-height: 1.4;
@@ -90,12 +109,13 @@ body {
 /* Button */
 
 .button-primary {
-    color: #FFFFFF;
+    color: var(--background);
     background-color: var(--accent);
     font-weight: 700;
     font-size: 16px;
     line-height: 1.9;
     letter-spacing: 0.06em;
+    font-family: inherit;
     display: flex;
     align-items: center;
     text-align: center;
@@ -104,8 +124,8 @@ body {
 
 .button-primary:hover,
 .button-primary:focus {
-    color: #FFFFFF;
-    background-color: #188CE8;
+    color: var(--background);
+    background-color: var(--baghovfocus);
 }
 
 /* Section features */
@@ -129,7 +149,11 @@ body {
 /* Section Our team */
 
 .team {
-    background-color: #F5F4FA;
+    background-color: var(--backgroundteambtn);
+}
+
+.team-list-item {
+ background-color: var(--background);
 }
 
 .team-img-titel {
@@ -145,11 +169,11 @@ body {
 /* Section Footer  */
 
 .footer {
-    background-color: #2F303A;
+    background-color: var(--bagrundherfoot);
 }
 
 .footer-logo {
-    color: #FFFFFF;
+    color: var(--background);
     font-family: Raleway, sans-serif;
     font-weight: 700;
     font-size: 26px;
@@ -157,14 +181,14 @@ body {
 }
 
 .footer-map-link {
-    color: #FFFFFF;
+    color: var(--background);
     font-style: normal;
     line-height: 1.7;
     text-decoration: none
 }
 
 .footer-meiltel-link {
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--rgba);
     font-style: normal;
     line-height: 1.7;
     text-decoration: none
@@ -174,23 +198,24 @@ body {
 .footer-map-link:focus,
 .footer-meiltel-link:hover,
 .footer-meiltel-link:focus {
-    color: var(--accent)
+    color: var(--accent);
 }
 
 /* <!-- Section portfolio --> */
 
 .button-secondary {
-    background-color: #F5F4FA;
+    background-color: var(--backgroundteambtn);
     font-weight: 500;
     font-size: 16px;
     line-height: 1.6;
+    font-family: inherit;
     text-align: center;
     cursor: pointer;
 }
 
 .button-secondary:hover,
 .button-secondary:focus {
-    color: #FFFFFF;
+    color: var(--background);
     background-color: var(--accent)
 }
 
@@ -199,14 +224,14 @@ body {
 }
 
 .portfolio-title-img {
-    color: #212121;
+    color: var(--title);
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
 }
 
 .portfolio-description {
-    color: #757575;
+    color: var(--description);
     font-size: 16px;
     line-height: 1.9;
 }
